@@ -1,0 +1,170 @@
+COMMERCIAL LOAN AGREEMENT
+(Revolving Credit Facility)
+
+Agreement Date: January 15, 2024
+Amendment and Restatement of: Original Credit Agreement dated March 8, 2022
+
+PARTIES
+Borrower:    NexGen Financial Technologies, Inc.
+             100 Congress Avenue, Suite 2200
+             Austin, Texas 78701
+             ("Borrower" or "Company")
+
+Lender:      Citibank, N.A.
+             388 Greenwich Street
+             New York, New York 10013
+             ("Administrative Agent" and "Lender")
+
+Co-Lenders:  JPMorgan Chase Bank, N.A.  ($60,000,000 commitment)
+             Silicon Valley Bank, a division of First Citizens Bank  ($40,000,000 commitment)
+             (collectively with Citibank, the "Lender Group")
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ARTICLE 1: DEFINITIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1.1 Defined Terms
+"Adjusted EBITDA" means, for any Measurement Period, the Borrower's net income (loss) plus: (i) income tax expense (benefit), (ii) interest expense, (iii) depreciation and amortization, (iv) non-cash stock-based compensation, (v) non-recurring restructuring charges approved in writing by the Administrative Agent (not to exceed $25 million in any fiscal year), minus (vi) interest income and other non-operating income.
+
+"Applicable Margin" means: (a) for SOFR Loans, a rate per annum equal to 3.00% when the Net Leverage Ratio is greater than 3.0x, 2.50% when between 2.0x and 3.0x, and 2.00% when below 2.0x; (b) for Base Rate Loans, 1.00% less than the corresponding SOFR margin in each tier.
+
+"Borrowing Base" means, as of any date of determination, the lesser of: (a) the Total Commitment ($200,000,000), and (b) 4.0x the Borrower's Adjusted EBITDA for the trailing 12-month period ending on the most recent quarter.
+
+"Change of Control" means any transaction or series of related transactions in which: (a) any person or group acquires beneficial ownership of more than 50% of the total voting power of the Borrower's capital stock, or (b) the individuals who constitute the Board of Directors as of the Agreement Date cease to constitute at least a majority of the Board (the "Incumbent Board"), unless such new directors were approved by a vote of at least 75% of the Incumbent Board.
+
+"SOFR" means the Secured Overnight Financing Rate as published by the Federal Reserve Bank of New York, subject to a floor of 0.00%.
+
+"Total Commitment" means $200,000,000, representing: Citibank $100,000,000, JPMorgan $60,000,000, SVB/First Citizens $40,000,000.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ARTICLE 2: THE CREDIT FACILITY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+2.1 Revolving Credit Facility
+Subject to the terms and conditions of this Agreement, the Lender Group agrees to make revolving loans to the Borrower from time to time during the Availability Period in an aggregate principal amount not exceeding the Total Commitment. The facility is revolving: amounts repaid may be reborrowed, subject to the terms herein.
+
+2.2 Maturity and Availability Period
+The Availability Period ends, and all outstanding Loans become immediately due and payable, on January 15, 2027 (the "Maturity Date"), unless extended or earlier terminated. The Borrower may request a 1-year extension, exercisable no earlier than 12 months and no later than 6 months prior to the Maturity Date, subject to Lender Group consent (not to be unreasonably withheld) and payment of a 0.25% extension fee on the Total Commitment.
+
+2.3 Interest Rates and Payments
+Interest on outstanding principal accrues at the Applicable Margin plus SOFR (Term SOFR, 1-month tenor). Interest is payable monthly in arrears on the last business day of each calendar month. The Borrower may elect a Base Rate loan (Prime Rate plus Applicable Base Rate Margin) as an alternative.
+
+As of the Agreement Date, with SOFR at approximately 5.33% and the Applicable Margin at 2.50% (based on a Net Leverage Ratio between 2.0x-3.0x), the all-in rate is approximately 7.83%.
+
+2.4 Fees
+- Commitment Fee: 0.35% per annum on the unused portion of the Total Commitment, payable quarterly
+- Upfront Fee: 1.25% of Total Commitment paid at closing ($2,500,000), non-refundable
+- Amendment Fee: 0.50% of Total Commitment paid at signing of this Amended and Restated Agreement ($1,000,000)
+- Letter of Credit Fee: 2.25% per annum on outstanding LC face amount (if any)
+
+2.5 Prepayment
+The Borrower may prepay outstanding loans at any time without premium or penalty, subject to 3 business days' notice for SOFR Loans (to cover SOFR breakage costs, if any). There is no minimum prepayment amount. Voluntary prepayments permanently reduce the Commitment only if the Borrower provides written notice of its intent to do so.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ARTICLE 3: CONDITIONS TO BORROWING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+3.1 Conditions Precedent
+Each borrowing request is subject to:
+(a) The representations and warranties being true and correct in all material respects on the borrowing date
+(b) No Default or Event of Default having occurred and being continuing
+(c) No Material Adverse Effect having occurred since the most recent audited financial statements
+(d) Receipt by the Administrative Agent of a duly executed Borrowing Notice at least 2 business days prior to the requested funding date (SOFR Loans) or 1 business day (Base Rate Loans)
+(e) The borrowing not causing outstanding loans to exceed the Borrowing Base
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ARTICLE 4: FINANCIAL COVENANTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+4.1 Minimum Liquidity
+As of the last day of each fiscal quarter, the Borrower shall maintain unrestricted cash and cash equivalents of not less than $40,000,000. For purposes of this covenant, "unrestricted" means not pledged, encumbered, or reserved for a specific liability.
+
+4.2 Maximum Net Leverage Ratio
+As of the last day of each fiscal quarter, the Borrower's Net Leverage Ratio (defined as: total funded debt minus cash and cash equivalents, divided by trailing 12-month Adjusted EBITDA) shall not exceed 4.0x. 
+
+The step-down schedule:
+- Q1-Q4 2024: Maximum 4.0x
+- Q1-Q2 2025: Maximum 3.75x
+- Q3 2025 onward: Maximum 3.5x
+
+4.3 Minimum Interest Coverage Ratio
+As of the last day of each fiscal quarter, the ratio of trailing 12-month Adjusted EBITDA to trailing 12-month cash interest expense shall not be less than 2.5x.
+
+4.4 Covenant Cure
+If the Borrower fails to satisfy any financial covenant in Section 4.1-4.3, the Borrower may, within 30 days following such fiscal quarter end, cure the failure by issuing equity and applying the cash proceeds to reduce outstanding debt (the "Equity Cure"). The Equity Cure right is available a maximum of two times during the term of the Agreement and may not be exercised in two consecutive quarters.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ARTICLE 5: AFFIRMATIVE COVENANTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+5.1 Financial Reporting
+The Borrower shall deliver to the Administrative Agent:
+(a) Annual audited financial statements (Big 4 or equivalent firm) within 90 days after fiscal year-end, with unqualified opinion
+(b) Quarterly unaudited financial statements within 45 days after each fiscal quarter-end
+(c) A compliance certificate certifying no Default and demonstrating financial covenant compliance, within 5 days of each financial statement delivery
+(d) Annual operating plan and budget within 60 days after the start of each fiscal year
+(e) Notice of material litigation, regulatory action, or potential MAC within 5 business days of becoming aware
+
+5.2 Insurance
+The Borrower shall maintain: commercial general liability ($5M per occurrence), errors and omissions ($20M annual aggregate), cyber liability ($25M annual aggregate), directors and officers ($20M annual aggregate), and such other insurance as the Administrative Agent reasonably requires. All policies name the Administrative Agent as loss payee or additional insured where applicable.
+
+5.3 Regulatory Compliance
+The Borrower shall: (a) maintain in good standing all Money Transmitter Licenses and other material regulatory authorizations, (b) promptly notify the Administrative Agent of any material regulatory inquiry, examination, or enforcement action, and (c) not voluntarily surrender any MTL without prior written consent of the Administrative Agent.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ARTICLE 6: NEGATIVE COVENANTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+6.1 Indebtedness
+Without the Administrative Agent's prior written consent, the Borrower shall not incur additional funded indebtedness in excess of $25,000,000 in aggregate, excluding: (a) this facility, (b) capitalized leases up to $10M, (c) purchase money debt up to $5M, and (d) intercompany debt among wholly-owned subsidiaries.
+
+6.2 Restricted Payments
+The Borrower shall not declare or pay dividends, repurchase capital stock, or make distributions, unless: (a) no Default is continuing and (b) after giving pro forma effect, the Net Leverage Ratio does not exceed 3.0x and liquidity is at least $75,000,000.
+
+6.3 Asset Sales
+The Borrower shall not sell, transfer, or dispose of assets with a fair market value exceeding $15,000,000 in any 12-month period without Administrative Agent consent, except for disposals in the ordinary course of business (including retirement of obsolete equipment).
+
+6.4 Mergers and Acquisitions
+The Borrower shall not make acquisitions with an aggregate consideration exceeding $50,000,000 in any 12-month period without Administrative Agent consent. Acquisitions up to $50M in aggregate are permitted provided: (a) no Default is continuing, (b) the target is in a Permitted Business (financial technology, software, or adjacent businesses), and (c) pro forma Net Leverage Ratio does not exceed 3.5x.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ARTICLE 7: EVENTS OF DEFAULT AND REMEDIES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+7.1 Events of Default
+Each of the following constitutes an Event of Default:
+(a) Payment Default: Failure to pay principal when due, or interest or fees within 5 business days of when due
+(b) Financial Covenant Default: Breach of any covenant in Article 4 not cured within the applicable cure period
+(c) Affirmative/Negative Covenant Default: Breach of material covenant in Articles 5 or 6, not remedied within 30 days after notice
+(d) Representation Breach: Any representation or warranty proves to have been false in any material respect when made
+(e) Cross-Default: Default under other material indebtedness exceeding $10,000,000
+(f) Insolvency: Voluntary or involuntary bankruptcy, insolvency, or general assignment for the benefit of creditors
+(g) Judgment: Unsatisfied judgment(s) against the Borrower exceeding $15,000,000 that remain unstayed for 45 days
+(h) Change of Control: A Change of Control occurs without Administrative Agent's prior written consent
+(i) MTL Revocation: Revocation or suspension of MTLs in states representing more than 20% of TPV in the trailing 12-month period
+(j) BaaS Agreement Termination: Termination of the BaaS Agreement with First Commerce Bank, unless a Replacement Bank Partner Agreement is in place within 90 days
+
+7.2 Remedies
+Upon an Event of Default: (a) the Administrative Agent may declare all loans immediately due and payable, (b) terminate the Commitment, and (c) exercise any rights under applicable law or the Security Agreement. During the cure periods specified above, the Commitment is not automatically terminated.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ARTICLE 8: GENERAL PROVISIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+8.1 Governing Law
+This Agreement shall be governed by the laws of the State of New York, without regard to conflict-of-law principles. The Borrower irrevocably submits to the exclusive jurisdiction of federal and state courts in the Southern District of New York.
+
+8.2 Assignments
+The Lender Group may assign portions of the facility to other financial institutions without Borrower consent, provided that (a) the minimum assignment amount is $5,000,000, (b) the assignee is a bank, insurance company, or other institutional investor, and (c) the Borrower is notified promptly. The Borrower may not assign its rights or obligations without the Lender Group's written consent.
+
+8.3 Confidentiality
+The Lender Group agrees to maintain the confidentiality of non-public information provided by the Borrower, except for: disclosures required by law or regulation, disclosures to potential assignees under NDA, disclosures with the Borrower's consent, and disclosures to supervisory authorities with jurisdiction.
+
+Signatures:
+NexGen Financial Technologies, Inc.
+By: Marcus Chen, Chief Executive Officer
+Date: January 15, 2024
+
+Citibank, N.A., as Administrative Agent and Lender
+By: [Authorized Signatory]
+Date: January 15, 2024

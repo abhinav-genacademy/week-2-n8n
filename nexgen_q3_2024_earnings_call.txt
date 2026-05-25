@@ -1,0 +1,115 @@
+NEXGEN FINANCIAL TECHNOLOGIES, INC. (NFTI)
+Q3 2024 EARNINGS CONFERENCE CALL TRANSCRIPT
+October 29, 2024 | 5:00 PM Eastern Time
+
+Participants:
+- Marcus Chen, Chief Executive Officer
+- Priya Sharma, Chief Financial Officer
+- David Okafor, VP of Investor Relations
+
+Analysts:
+- Jennifer Walsh, Goldman Sachs
+- Raymond Cho, Morgan Stanley
+- Aisha Patel, Barclays Capital
+- Tom Nguyen, William Blair
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+OPENING REMARKS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+David Okafor (VP, Investor Relations):
+Good afternoon, and welcome to NexGen Financial Technologies' third quarter 2024 earnings conference call. I'm David Okafor, VP of Investor Relations. With me today are Marcus Chen, our Chief Executive Officer, and Priya Sharma, our Chief Financial Officer.
+
+Today's call will contain forward-looking statements that involve risks and uncertainties. Actual results may differ materially from those projected. Please refer to the risk factors in our most recent Form 10-K and today's earnings release for a discussion of risks.
+
+We will also reference certain non-GAAP financial measures. A reconciliation of GAAP to non-GAAP measures is included in our earnings release and supplemental slides, available at ir.nexgenfintech.com. With that, I'll turn the call over to Marcus.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CEO REMARKS — MARCUS CHEN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Marcus Chen (CEO):
+Thank you, David. Good afternoon, everyone, and thank you for joining us.
+
+Q3 was a strong quarter for NexGen. Total revenue grew 34% year-over-year to $73.2 million, driven by record payment volume of $12.8 billion in the quarter — that's 49% growth over Q3 2023. We added 21 net new enterprise clients in the quarter, ending September at 298, and our Net Revenue Retention held at 117% — demonstrating that our existing clients are expanding their usage of the platform faster than any churn we see.
+
+I want to highlight three strategic themes from the quarter.
+
+First, our enterprise pipeline is the strongest it's been since our IPO. We signed six seven-figure contracts in Q3, including our largest-ever deal — a $6.1 million annual contract with a top-10 U.S. grocery chain that will use NexGen to offer co-branded debit cards and installment credit to their 28 million loyalty program members. Implementations of this scale typically take 6-8 months, so we expect revenue contribution beginning in Q2 2025.
+
+Second, Project Horizon — our next-generation ledger infrastructure — is tracking to schedule. We completed internal testing in September and began limited beta with three clients in October. The new architecture processes transactions 3x faster than our current ledger, with 50% lower infrastructure cost per transaction. We remain on track for General Availability in Q2 2025 with full client migration completed by end of 2025.
+
+Third, regarding credit quality in our Lending Enablement segment: I want to be transparent with you. We are seeing modest deterioration in BNPL charge-offs, driven by consumer cohorts from 2023 originations. Net charge-offs in Q3 were 3.4%, up from 3.0% in Q2 and 2.9% in Q3 2023. We made the decision in September to meaningfully tighten underwriting — specifically, raising minimum credit score thresholds by 40 points and reducing maximum BNPL exposure for the 18-29 age cohort. This will create a near-term headwind in Lending Enablement origination volumes for Q4 and into H1 2025, but we believe it's the right long-term decision for the health of the book and our relationship with First Commerce Bank.
+
+Now I'll hand it over to Priya for the financial details.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CFO REMARKS — PRIYA SHARMA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Priya Sharma (CFO):
+Thank you, Marcus. Good afternoon.
+
+Q3 2024 Revenue
+Total revenue of $73.2 million grew 33.8% year-over-year (Q3 2023: $54.7 million).
+- Platform Services: $53.0 million, up 30.6% (Q3 2023: $40.6 million)
+- Lending Enablement: $20.2 million, up 43.0% (Q3 2023: $14.1 million)
+
+Platform Services growth was driven by TPV expansion. We did see approximately 7% pricing headwind from volume-tier discounts on three large contracts, consistent with what we guided on our Q2 call.
+
+Gross Profit and Margin
+Gross profit was $44.2 million, with a gross margin of 60.4% — a 270 basis point improvement versus Q3 2023 (57.7%). The improvement reflects leverage on our infrastructure costs as volume scales, partially offset by higher headcount in our compliance and client success teams. We continue to expect full-year gross margins in the 60-61% range.
+
+Operating Expenses
+Total operating expenses (excluding COGS) were $77.8 million, up 15% year-over-year, well below our revenue growth rate of 34%. This operating leverage reflects our Q3 restructuring, which was completed by August 31. The total charge for the restructuring was $22.8 million — slightly above our original estimate of $20 million due to higher-than-expected severance costs in Germany (our Berlin office).
+
+R&D expense was $20.1 million (27.5% of revenue), down slightly from Q2 as Project Horizon enters a more capital-efficient testing phase.
+
+Adjusted EBITDA
+Adjusted EBITDA was $10.9 million, representing a 14.9% Adjusted EBITDA margin (Q3 2023: $4.6 million, 8.4% margin). This is the third consecutive quarter of Adjusted EBITDA margin expansion.
+
+Balance Sheet and Cash Flow
+We ended Q3 with $163.4 million in cash and short-term investments. Free cash flow was $6.2 million in the quarter — our second consecutive quarter of positive free cash flow. Our revolving credit facility had $125 million outstanding; we do not intend to draw further on the revolver in the near term.
+
+Q4 2024 Guidance
+We are providing the following guidance for Q4 2024:
+- Revenue: $74 to $77 million (19-24% year-over-year growth, reflecting the intentional Lending Enablement slowdown)
+- Adjusted EBITDA: $11 to $13 million
+- Enterprise Clients at quarter-end: 308 to 315
+
+And we are tightening our full-year 2024 guidance:
+- Revenue: $280 to $285 million (revised from $278-$288 million)
+- Adjusted EBITDA: $41 to $44 million (revised from $38-$44 million)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Q&A SESSION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Jennifer Walsh (Goldman Sachs):
+Thanks for taking my question. Marcus, on the grocery chain deal — $6.1 million ACV, 28 million loyalty members. Can you help us think about the potential TPV and revenue ramp once that's live? And what's the competitive dynamic — were you up against Marqeta or Stripe on this one?
+
+Marcus Chen (CEO):
+Good question, Jennifer. We can't give you specific TPV projections for individual clients, but I can give you a framework. If even 10% of those 28 million members activate the co-branded debit product, and average $2,000 in annualized spend per activated user, you're looking at roughly $5-6 billion in incremental TPV from this one client at steady state. That will take 2-3 years to fully ramp. On competition: yes, Marqeta was the incumbent in initial discussions. We won primarily on three dimensions — our MTL coverage (they don't hold MTLs, so there's additional licensing complexity), our compliance-embedded platform, and a more flexible commercial structure that aligned incentives better with their volume growth. Stripe Treasury wasn't in this RFP.
+
+Raymond Cho (Morgan Stanley):
+Priya, on the credit quality side — you mentioned tightening underwriting thresholds. Can you quantify the near-term revenue impact? And do you have a sense of what a normalized charge-off rate looks like for this portfolio?
+
+Priya Sharma (CFO):
+Ray, we expect Lending Enablement revenue growth to slow to approximately 10-15% in Q4 versus our pre-tightening expectations of 30%+. For H1 2025, we're guiding to Lending Enablement growth in the 15-20% range. On normalized charge-offs: our target is 2.5-3.0%. We got there in 2022 and early 2023. The deterioration has been specific to 2023-vintage BNPL loans in the sub-640 FICO segment. Our 2024 vintages, which have the tighter underwriting, are performing within our target range so far — early delinquency indicators are about 30% better than the 2023 cohort.
+
+Aisha Patel (Barclays Capital):
+Marcus, First Commerce Bank's BaaS agreement expires in December 2027. With regulatory scrutiny on bank-fintech partnerships increasing, can you give us an update on renewal discussions and what your contingency plan looks like if that relationship changes?
+
+Marcus Chen (CEO):
+Aisha, fair question and one I expected. We've had ongoing dialogue with First Commerce's leadership. I want to separate two things: near-term renewal risk, which I'd characterize as low — we represent over 12% of First Commerce's non-interest income, so the economic incentive for renewal is strong on both sides. We've already had preliminary term sheet discussions and expect to formalize a multi-year extension in H1 2025. Longer-term regulatory risk is real — the OCC guidance from earlier this year does impose additional compliance requirements on bank-fintech arrangements. We've invested heavily in a direct path: we filed for a federal bank charter in Q2 2024. The OCC review process typically takes 18-24 months. Having our own charter would eliminate third-party bank dependency, though it does create its own capital requirements — we'd need to capitalize the bank at approximately $50 million.
+
+Tom Nguyen (William Blair):
+Project Horizon — can you give us more color on the 50% lower infrastructure cost per transaction? And does that translate to meaningful margin expansion, or is it more of a reinvestment story?
+
+Priya Sharma (CFO):
+Tom, it's primarily a gross margin story. At our current run rate, infrastructure costs within COGS are roughly $28 million annually. A 50% reduction gets us to $14 million — about 500 basis points of gross margin. However, we plan to pass through a portion of that as competitive pricing to support volume growth, so we'd expect to net approximately 200-250 basis points of gross margin improvement annually post full migration. The first effect hits when we migrate the initial cohort of clients to Horizon in H2 2025.
+
+David Okafor (VP, IR):
+That's all the time we have today. Thank you for joining us. A replay will be available at ir.nexgenfintech.com within 2 hours. We'll see you next quarter.
+
+[END OF TRANSCRIPT]
