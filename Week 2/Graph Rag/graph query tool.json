@@ -1,0 +1,84 @@
+{
+  "name": "Tool — graph_query",
+  "nodes": [
+    {
+      "parameters": {
+        "inputSource": "jsonExample",
+        "jsonExample": "{\n  \"cypher\": \"MATCH (n:Person) RETURN n.name LIMIT 5\"\n}"
+      },
+      "id": "f62a8b89-9939-45fe-bf6d-493e9ec38b83",
+      "name": "Sub-workflow Trigger",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:7474/db/neo4j/tx/commit",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBasicAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ statements: [{ statement: $json.cypher }] }) }}",
+        "options": {
+          "timeout": 60000
+        }
+      },
+      "id": "712b5bee-2239-4f8a-86aa-489cb89e3bd4",
+      "name": "Execute Cypher",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        224,
+        0
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 2000,
+      "credentials": {
+        "httpBasicAuth": {
+          "id": "9u0fOta7bM4aOTO0",
+          "name": "Unnamed credential 4"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Sub-workflow Trigger": {
+      "main": [
+        [
+          {
+            "node": "Execute Cypher",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "d35cc91e-66d3-4846-bfe6-403ee1cd5772",
+  "meta": {
+    "instanceId": "2f84799f377210bb373f61a59440873fec4ae3f3cea60e8a19fd0955faa44541"
+  },
+  "id": "zbrlsGytnZ7pdYY7",
+  "tags": []
+}

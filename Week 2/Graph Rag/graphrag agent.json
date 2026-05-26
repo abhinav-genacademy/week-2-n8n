@@ -1,0 +1,191 @@
+{
+  "name": "Org Knowledge Graph — GraphRAG Agent (Code Tools)",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "61fcdb3e-af90-4577-84ee-897173e8908f",
+      "name": "Chat Trigger",
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        0
+      ],
+      "webhookId": "graphrag-agent-code"
+    },
+    {
+      "parameters": {
+        "model": "mistral-large-latest",
+        "options": {
+          "temperature": 0
+        }
+      },
+      "id": "b5e843db-4ac2-453b-9e7f-42e589434f31",
+      "name": "Mistral Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatMistralCloud",
+      "typeVersion": 1,
+      "position": [
+        160,
+        240
+      ],
+      "credentials": {
+        "mistralCloudApi": {
+          "id": "qnHddVhXznWcKdV6",
+          "name": "Mistral Cloud account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "You are a knowledge graph assistant.\n\nGraph schema:\nPerson {id, name, role}, Project {id, name, status}, Decision {id, title, rationale}, Document {id, title, content}\n(Person)-[:APPROVED]->(Decision)\n(Person)-[:AUTHORED]->(Document)\n(Document)-[:DOCUMENTS]->(Decision|Project)\n(Decision)-[:RELATES_TO]->(Project)\n\nTools:\n1. graph_query(cypher) - Execute Cypher queries for structured questions\n2. semantic_search(query, k) - Find similar documents/decisions for rationale questions\n\nStrategy:\n- Multi-hop/structured → graph_query\n- Why/rationale → semantic_search\n\nCall the appropriate tool, then answer based on results.",
+          "maxIterations": 3
+        }
+      },
+      "id": "a01ac863-a205-4eb3-9bb1-db972ae92a12",
+      "name": "AI Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        288,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "name": "graph_query",
+        "description": "Execute a read-only Cypher query against Neo4j. Returns query results.",
+        "workflowId": {
+          "__rl": true,
+          "value": "zbrlsGytnZ7pdYY7",
+          "mode": "list"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "cypher": "={{ $fromAI('cypher', 'A read-only Cypher query', 'string') }}"
+          },
+          "schema": [
+            {
+              "id": "cypher",
+              "displayName": "cypher",
+              "type": "string",
+              "required": true
+            }
+          ]
+        }
+      },
+      "id": "0e23afa0-f9f8-4480-a6f2-54263da7c989",
+      "name": "graph_query",
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 2,
+      "position": [
+        368,
+        240
+      ]
+    },
+    {
+      "parameters": {
+        "name": "semantic_search",
+        "description": "Find Documents and Decisions semantically similar to a query string.",
+        "workflowId": {
+          "__rl": true,
+          "value": "qXWjclJgblFm3sk9",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/qXWjclJgblFm3sk9",
+          "cachedResultName": "Tool — semantic_search"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "query": "={{ $fromAI('query', 'The search query', 'string') }}",
+            "k": "={{ $fromAI('k', 'Number of results', 'number', '', 3) }}"
+          },
+          "schema": [
+            {
+              "id": "query",
+              "displayName": "query",
+              "type": "string",
+              "required": true
+            },
+            {
+              "id": "k",
+              "displayName": "k",
+              "type": "number",
+              "required": false,
+              "default": 3
+            }
+          ]
+        }
+      },
+      "id": "1c0fa49f-e6dc-4e1b-897f-e1775d9f94a2",
+      "name": "semantic_search",
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 2,
+      "position": [
+        560,
+        240
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Chat Trigger": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mistral Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "graph_query": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "semantic_search": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "a31c27d3-e4ca-4d34-bdcd-686ea1bbe560",
+  "meta": {
+    "instanceId": "2f84799f377210bb373f61a59440873fec4ae3f3cea60e8a19fd0955faa44541"
+  },
+  "id": "Uxj4Gh3s4mHCsyXG",
+  "tags": []
+}

@@ -1,0 +1,182 @@
+{
+  "name": "Tool — semantic_search",
+  "nodes": [
+    {
+      "parameters": {
+        "inputSource": "jsonExample",
+        "jsonExample": "{\n  \"query\": \"example question\",\n  \"k\": 3\n}"
+      },
+      "id": "b4162b94-60ea-49ec-9a82-2c08c5820609",
+      "name": "Sub-workflow Trigger",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        1952,
+        128
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://router.huggingface.co/hf-inference/models/BAAI/bge-small-en-v1.5/pipeline/feature-extraction",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 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"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "inputs",
+              "value": "={{ JSON.stringify({ inputs: $json.query }) }}"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 60000
+        }
+      },
+      "id": "6c77d7e9-1f05-4730-b3e0-700a4a4280b7",
+      "name": "Embed Query",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2176,
+        128
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 3000,
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "jsCode": "const embedding = $input.all().map(item => item.json);\nreturn [{ json: { embedding } }];"
+      },
+      "id": "c407b96a-67a3-44a7-a942-347c4d5258dc",
+      "name": "Extract Embedding",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2400,
+        128
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:7474/db/neo4j/tx/commit",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBasicAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ statements: [{ statement: \"CALL db.index.vector.queryNodes('doc_embeddings', $k, $vec) YIELD node, score RETURN elementId(node) AS id, score, 'Document' AS label, node.title AS title, coalesce(node.content, '') AS content UNION CALL db.index.vector.queryNodes('decision_embeddings', $k, $vec) YIELD node, score RETURN elementId(node) AS id, score, 'Decision' AS label, node.title AS title, coalesce(node.rationale, '') AS content\", parameters: { vec: $json.embedding, k: $('Sub-workflow Trigger').item.json.k || 3 } }] }) }}",
+        "options": {
+          "timeout": 60000
+        }
+      },
+      "id": "927f8a0a-9958-446a-b026-b16a543bf44b",
+      "name": "Vector Search",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2624,
+        128
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 2000,
+      "credentials": {
+        "httpBasicAuth": {
+          "id": "KTMc169L1PDYbsFf",
+          "name": "Unnamed credential"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const resp = $input.first().json;\nconst rows = (resp.results && resp.results[0] && resp.results[0].data) || [];\nconst k = $('Sub-workflow Trigger').item.json.k || 3;\nconst sorted = rows\n  .map(r => ({ id: r.row[0], score: r.row[1], label: r.row[2], title: r.row[3], content: r.row[4] }))\n  .sort((a, b) => b.score - a.score)\n  .slice(0, k);\nreturn [{ json: { results: sorted } }];"
+      },
+      "id": "27d36a65-e545-4a27-a2b8-5909d1e41209",
+      "name": "Format Results",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2832,
+        128
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Sub-workflow Trigger": {
+      "main": [
+        [
+          {
+            "node": "Embed Query",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embed Query": {
+      "main": [
+        [
+          {
+            "node": "Extract Embedding",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract Embedding": {
+      "main": [
+        [
+          {
+            "node": "Vector Search",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Vector Search": {
+      "main": [
+        [
+          {
+            "node": "Format Results",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "baafaf40-be92-4445-905b-2de21f65154d",
+  "meta": {
+    "instanceId": "2f84799f377210bb373f61a59440873fec4ae3f3cea60e8a19fd0955faa44541"
+  },
+  "id": "qXWjclJgblFm3sk9",
+  "tags": []
+}

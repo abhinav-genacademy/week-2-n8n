@@ -1,0 +1,145 @@
+{
+  "name": "2A — Retriever Tool (Sub-Workflow)",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "a35ce116-4217-4e90-a914-df90c94d71fa",
+      "name": "Execute Workflow Trigger",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1,
+      "position": [
+        6592,
+        16
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const query = $input.first().json.query || $input.first().json.chatInput || $input.first().json.input || '';\nreturn [{ json: { query } }];"
+      },
+      "id": "d187cc5a-2ea4-4ce4-8f9c-e4a71bc6a35b",
+      "name": "Extract Query",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        6816,
+        16
+      ],
+      "notes": "Extracts the search query from whatever field the agent passes in."
+    },
+    {
+      "parameters": {
+        "mode": "retrieve-as-tool",
+        "toolName": "enterprisepolicies",
+        "toolDescription": "Search the ACME knowledge base covering HR policies, compliance rules, product documentation, and onboarding guides.",
+        "pineconeIndex": {
+          "__rl": true,
+          "value": "enterprise-policies",
+          "mode": "list",
+          "cachedResultName": "enterprise-policies"
+        },
+        "options": {}
+      },
+      "id": "947d175e-5cf1-4857-9904-3c103b0a1e24",
+      "name": "Pinecone Vector Store",
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+      "typeVersion": 1,
+      "position": [
+        6800,
+        240
+      ],
+      "credentials": {
+        "pineconeApi": {
+          "id": "qFORTiuyfEG38hbc",
+          "name": "Pinecone account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "ce7be0ca-8a0e-471f-a332-56784ba6ceb6",
+      "name": "HuggingFace Embeddings",
+      "type": "@n8n/n8n-nodes-langchain.embeddingsHuggingFaceInference",
+      "typeVersion": 1,
+      "position": [
+        6784,
+        384
+      ],
+      "credentials": {
+        "huggingFaceApi": {
+          "id": "qgT0Zi0HBVyMmhrk",
+          "name": "Hugging Face account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Execute Workflow Trigger": {
+      "main": [
+        [
+          {
+            "node": "Extract Query",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HuggingFace Embeddings": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Pinecone Vector Store",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "8cac4f7c-a07d-46c4-9f66-bf8d97a51306",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "2f84799f377210bb373f61a59440873fec4ae3f3cea60e8a19fd0955faa44541"
+  },
+  "id": "dbnJNHkImgsKT7mB",
+  "tags": [
+    {
+      "updatedAt": "2026-05-12T08:59:29.326Z",
+      "createdAt": "2026-05-12T08:59:29.326Z",
+      "id": "BStDkf4ggYQaHAYM",
+      "name": "RAG"
+    },
+    {
+      "updatedAt": "2026-05-23T13:50:38.647Z",
+      "createdAt": "2026-05-23T13:50:38.647Z",
+      "id": "hhNNqBWUhKPi8di6",
+      "name": "Enterprise Q&A"
+    },
+    {
+      "updatedAt": "2026-05-23T14:01:02.983Z",
+      "createdAt": "2026-05-23T14:01:02.983Z",
+      "id": "jCdBIuVewmSIjtp4",
+      "name": "Q&A Bot"
+    },
+    {
+      "updatedAt": "2026-05-24T00:35:44.185Z",
+      "createdAt": "2026-05-24T00:35:44.185Z",
+      "id": "pPNtBzRjWFXDZKfx",
+      "name": "Project-2A"
+    },
+    {
+      "updatedAt": "2026-05-23T13:50:38.643Z",
+      "createdAt": "2026-05-23T13:50:38.643Z",
+      "id": "xxTdacVhChQmuhRg",
+      "name": "Ingestion"
+    }
+  ]
+}
