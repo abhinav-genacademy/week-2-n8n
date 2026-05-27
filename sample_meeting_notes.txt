@@ -1,0 +1,77 @@
+Q3 2024 Engineering All-Hands Meeting Notes
+Date: September 15, 2024
+Attendees: Sarah Chen (VP Engineering), Marcus Webb (Senior Engineer), Jin Park (Engineer), Priya Sharma (Senior PM)
+
+=== Project Updates ===
+
+Auth System Rebuild (Project Lead: Marcus Webb)
+- Migration to OAuth 2.0 with PKCE is 60% complete
+- Mobile SDK integration taking longer than expected due to iOS keychain complexity
+- Using Auth0 as our identity provider, Vault for secrets management
+- Target completion: End of Q4 2024
+- Contributors: Marcus Webb, Jin Park, Sarah Chen providing architecture review
+
+Analytics Migration (Project Lead: Jin Park)
+- PAUSED until Q4 due to capacity constraints
+- Original plan was to migrate from Mixpanel to Snowflake + dbt
+- Mixpanel contract doesn't expire until Q1 2025, so no urgency
+- Will reassess timeline and scope in October
+- Tools planned: Snowflake, dbt, Fivetran for data ingestion
+
+Compliance Audit (Project Lead: Elena Rodriguez)
+- SOC 2 Type II audit COMPLETED successfully with zero findings
+- Used Drata for continuous monitoring and evidence collection
+- Auditors praised our automated compliance processes
+- Next audit window: July 2025
+
+=== Key Decisions ===
+
+Decision: Adopt OAuth 2.0 with PKCE for Authentication
+- Approved by: Sarah Chen
+- Date: August 15, 2024
+- Rationale: After evaluating OAuth 2.0, SAML, and custom JWT, we chose OAuth 2.0 with PKCE. 
+  Key factors: better mobile SDK support, lower implementation complexity, strong security 
+  guarantees, and aligns with Auth0 capabilities. SAML was rejected because we don't need 
+  enterprise-only features yet. Custom JWT would require too much security engineering effort.
+- Related Project: Auth System Rebuild
+
+Decision: Pause Analytics Migration Until Q4
+- Approved by: Sarah Chen  
+- Date: September 10, 2024
+- Rationale: Engineering capacity is constrained by SOC 2 remediation and auth system work.
+  Since Mixpanel contract doesn't expire until Q1 2025, there's no cost pressure. We'll 
+  re-evaluate scope and timeline in Q4 when we have more capacity.
+- Related Project: Analytics Migration
+
+Decision: Select Drata as SOC 2 Compliance Vendor
+- Approved by: Elena Rodriguez
+- Date: July 5, 2024
+- Rationale: Evaluated Drata vs Vanta. Drata won on integration breadth (covers our AWS, 
+  Okta, and GitHub stack natively) and stronger continuous monitoring. Vanta was 18% cheaper 
+  but required more manual evidence collection. Total cost of ownership favored Drata.
+- Related Project: Compliance Audit
+
+=== Action Items ===
+
+1. Marcus to complete iOS SDK integration by end of month
+2. Jin to document analytics migration requirements for Q4 planning
+3. Sarah to hire 2 additional engineers to increase capacity
+4. Team to implement better project scoping process
+
+=== Team Updates ===
+
+Sarah Chen (VP Engineering, Engineering team) leads the engineering organization with 
+background in distributed systems and platform infrastructure. Skills: Python, Distributed 
+Systems, Leadership, Architecture, Kubernetes, AWS.
+
+Marcus Webb (Senior Engineer, Engineering team) is our auth and security specialist who 
+led the OAuth 2.0 migration. Skills: Python, Go, Security, OAuth, SAML, Cryptography.
+
+Jin Park (Engineer, Engineering team) is a full-stack engineer who recently joined the 
+analytics migration team. Skills: Python, React, TypeScript, PostgreSQL, dbt.
+
+Priya Sharma (Senior PM, Product team) is product lead for pricing and growth with heavy 
+analytics background. Skills: Product Strategy, Analytics, SQL, Pricing Strategy, A/B Testing.
+
+Elena Rodriguez (Legal Counsel, Legal team) drives our SOC 2 program and ensures regulatory 
+compliance. Skills: Compliance, Contract Law, SOC 2, GDPR, Data Privacy.
